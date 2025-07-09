@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme{
+    --animate-slide-in : slide-in 0.7s ease-out forwards;
+    @keyframes slide-in{
+        0% {
+            transform : translateX(5rem);
+            opacity: 0;
+        },
+        100%{
+            transform : translateX(0);
+            opacity: 1;
+        }
+    }
+}
