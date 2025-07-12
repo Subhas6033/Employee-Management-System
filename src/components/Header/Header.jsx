@@ -23,12 +23,12 @@ const Header = () => {
       active: true
     },
     {
-      name: 'Admin Panel',
+      name: 'Admin',
       slug: '/admin-dashboard',
       active: false,
     },
     {
-      name: 'Employee Dashboard',
+      name: 'Employee',
       slug: '/employee-dashboard',
       active: !true
     },
@@ -42,7 +42,7 @@ const Header = () => {
   useEffect(() => { }, [])
 
   return (
-    <header className={`flex justify-between items-center py-2 px-4 overflow-x-hidden ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
+    <header className={`flex justify-between items-center py-2 px-4 overflow-x-hidden transition-all duration-300 ease-in ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
       <div className='flex flex-col justify-between items-start px-3'>
         <h3 className='text-md'>Hello</h3>
         <h1 className='text-lg font-bold'>Subhas <span className='text-2xl'>👋</span></h1>

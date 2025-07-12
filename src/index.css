@@ -1,6 +1,29 @@
 @import "tailwindcss";
 
+*{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+        display: none;     
+}
+
 @theme{
+
+
     --animate-slide-in : slide-in 0.7s ease-out forwards;
     @keyframes slide-in{
         0% {

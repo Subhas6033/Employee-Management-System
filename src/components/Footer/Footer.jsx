@@ -10,8 +10,6 @@ import { useSelector } from 'react-redux';
 const Footer = () => {
 
   const date = new Date().toLocaleDateString('en-IN', {
-    day: '2-digit',
-    month: 'long',
     year: 'numeric',
   });
 
@@ -19,8 +17,9 @@ const Footer = () => {
 
 
   return (
-    <footer className={`text-center py-4 flex flex-col gap-3 md:flex-row justify-evenly items-center px-5 ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
-      <p>copyright &copy; <span className='underline'>{date}</span> All rights Reserved.</p>
+    <footer className={`flex flex-col gap-5 md:flex-row justify-evenly items-center transition-all duration-300 ease-in md:min-h-[102px]  h-auto py-3 md:py-0 ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
+      {/* <div className='p-10'> */}
+      <p className=''>copyright &copy; <span className='underline'>{date}</span> All rights Reserved.</p>
       <p>Designed and Developed by
         <span className={`underline font-bold text-lg px-2 ${isDark ? "text-amber-400" : "text-red-700"}`}>
           <i>
@@ -59,7 +58,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-
+    {/* </div> */}
     </footer>
   )
 }

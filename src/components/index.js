@@ -11,6 +11,8 @@ import FailedTask from "./Tasklist/FailedTask";
 import NewTask from "./Tasklist/NewTask";
 import Input from './Input/Input'
 import Button from "./Button/Button";
+import Container from "./Container/Container";
+import Select from "./Input/Select";
 
 export {
     Header,
@@ -25,5 +27,7 @@ export {
     FailedTask,
     NewTask,
     Input,
-    Button
+    Button,
+    Container,
+    Select
 }
