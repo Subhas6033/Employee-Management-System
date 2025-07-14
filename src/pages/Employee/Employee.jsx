@@ -1,11 +1,11 @@
 import React from 'react'
 import {Input, Select, Button} from '../../components/index'
-import { useSelector } from 'react-redux'
+import useDarkMode from '../../Constant/Constant'
 
 
 const Employee = () => {
 
-  const isDark = useSelector((state) => state.theme.isDarkMode)
+  const isDark = useDarkMode()
 
 
   return (

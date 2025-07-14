@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import { useSelector } from 'react-redux';
+import useDarkMode from '../../Constant/Constant';
 
 
 
@@ -13,11 +13,11 @@ const Footer = () => {
     year: 'numeric',
   });
 
-  const isDark = useSelector((state) => state.theme.isDarkMode)
+  const isDark = useDarkMode()
 
 
   return (
-    <footer className={`flex flex-col gap-5 md:flex-row justify-evenly items-center transition-all duration-300 ease-in md:min-h-[102px]  h-auto py-3 md:py-0 ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
+    <footer className={`flex flex-col gap-5 md:flex-row justify-evenly items-center transition-all duration-300 ease-in md:min-h-[108px]  h-auto py-3 md:py-0 ${isDark ? "bg-gray-900 text-white" : "bg-slate-400 text-black"}`}>
       {/* <div className='p-10'> */}
       <p className=''>copyright &copy; <span className='underline'>{date}</span> All rights Reserved.</p>
       <p>Designed and Developed by

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import useDarkMode from '../../Constant/Constant'
 
 
 const Card = ({
@@ -8,12 +8,13 @@ const Card = ({
   taskNumber,
   taskTitle,
   taskDescription,
+  className =''
 }) => {
 
-  const isDark = useSelector((state) => state.theme.isDarkMode)
+  const isDark = useDarkMode()
 
   return (
-    <div className={`${isDark ? "bg-gray-950 text-slate-200" : "bg-indigo-300 text-gray-900"} min-h-56 h-auto max-w-[95%] md:w-72 m-2 border-2 rounded-md`}>
+    <div className={`${isDark ? "bg-gray-950 text-slate-200" : "bg-indigo-300 text-gray-900"} min-h-56 h-auto max-w-[95%] md:w-80 md:h-80 m-2 border-3 rounded-md ${className}`}>
 
 
       {/* Task Category and Date area */}
@@ -23,14 +24,14 @@ const Card = ({
       </div>
 
     {/* Task title area */}
-      <div className='flex flex-col items-center justify-center mt-2'>
+      <div className='flex flex-col items-center justify-center mt-5 h-fit md:relative top-2'>
         <p> {taskNumber} </p>
-        <h1> {taskTitle} </h1>
+        <h1 className='text-center'> {taskTitle} </h1>
       </div>
 
     {/* Task Description area */}
-      <div className='mt-4 bg-slate-500 rounded-b-md rounded-t-2xl min-h-28 h-auto'>
-        <p className='p-2 h-full'> {taskDescription} </p>
+      <div className='mt-4 rounded-b-md bg-slate-500 rounded-t-2xl min-h-42 h-auto md:relative top-6'>
+        <p className='p-2 h-auto'> {taskDescription} </p>
       </div>
     </div>
   )

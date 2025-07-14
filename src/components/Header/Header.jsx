@@ -3,7 +3,8 @@ import { Signup,Button } from '../index'
 import { useNavigate } from 'react-router-dom'
 import { IoReorderThree } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import useDarkMode from '../../Constant/Constant'
 import "../../index.css"
 import { toggleTheme } from '../../Features/ThemeSlice';
 
@@ -11,11 +12,10 @@ const Header = () => {
 
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+  const isDark = useDarkMode()
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const isDark = useSelector((state)=> state.theme.isDarkMode)
   const navItems = [
     {
       name: 'Home',
