@@ -1,12 +1,12 @@
 import React from 'react'
-import useDarkMode from '../../Hook/useDarkMode'
+// import useDarkMode from '../../Hook/useDarkMode'
 
 const Home = () => {
-  const isDark = useDarkMode()
+  // const isDark = useDarkMode()
 
 
   return (
-    <div className={`${isDark ? "bg-darkBackground" : "bg-lightBackground"} h-screen`}>
+    <div className={`bg-[radial-gradient(ellipse_at_top_left,_#e1ecf0_0%,_#cbd5e1_10%,_#eddd53_100%)] h-screen scroll-smooth`}>
       <p className='text-dark'>Hello World!</p>
     </div>
   )

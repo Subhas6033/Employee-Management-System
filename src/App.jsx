@@ -1,22 +1,22 @@
 import React from 'react'
 import {Footer, Header, Container} from './components/index'
 import { Outlet } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 
 function App() {
 
-  const isDark = useSelector((state)=> state.theme.isDarkMode)
+  // const isDark = useSelector((state)=> state.theme.isDarkMode)
 
   return (
     <>
-      <Header />
-      <main className={`${isDark ? "bg-gray-800" : "bg-slate-300"} transition-all duration-300 ease-in`}>
       <Container>
+      <Header />
+        <main className={`bg-[radial-gradient(ellipse_at_top_left,_#e1ecf0_0%,_#ededed_60%,_#eddd53_100%)] transition-all duration-300 ease-in`}>
         <Outlet />
-      </Container>
       </main>
       <Footer />
+      </Container>
     </>
   )
 }

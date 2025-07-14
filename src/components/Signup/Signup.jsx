@@ -3,8 +3,8 @@ import {Button} from '../index'
 
 
 
-const Signup = () => {
-  return <Button children={'Sign up'} className = {`md:h-10 md:w-20 p-1 text-white`} bgColor='bg-red-600/70' />
+const Signup = ({className}) => {
+  return <Button children={'Sign up'} className = {`rounded-4xl  px-3 py-3 text-black ${className}`} bgColor='bg-white' />
 }
 
 export default Signup

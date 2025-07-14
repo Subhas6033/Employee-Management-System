@@ -33,7 +33,7 @@ const Footer = () => {
             <Button
               children="Subscribe"
               bgColor="bg-gray-950 text-white px-5 py-3 md:-ml-20 mt-3 md:mt-0"
-              className='hover:cursor-pointer'
+              className='hover:cursor-pointer rounded-md'
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ const Footer = () => {
           </p>
           <p>Designed and Developed by <span className={`${isDark ? "text-amber-300" : "text-amber-700"}`}>
           <strong><em>
-              <Link to={''}>Subhas</Link>  
+              <Link to={'https://www.linkedin.com/in/subhas-mondal-bubai6033/'}>Subhas</Link>  
             </em></strong>
           </span></p>
         </div>
