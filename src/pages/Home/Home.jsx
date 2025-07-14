@@ -1,12 +1,14 @@
 import React from 'react'
-// import {Header, Footer} from '../../components/index'
-
+import useDarkMode from '../../Hook/useDarkMode'
 
 const Home = () => {
+  const isDark = useDarkMode()
+
+
   return (
-    <>
-      This is the Home page
-    </>
+    <div className={`${isDark ? "bg-darkBackground" : "bg-lightBackground"} h-screen`}>
+      <p className='text-dark'>Hello World!</p>
+    </div>
   )
 }
 

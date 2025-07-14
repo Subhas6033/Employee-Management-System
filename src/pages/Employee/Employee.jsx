@@ -1,6 +1,6 @@
 import React from 'react'
 import {Input, Select, Button} from '../../components/index'
-import useDarkMode from '../../Constant/Constant'
+import useDarkMode from '../../Hook/useDarkMode'
 
 
 const Employee = () => {

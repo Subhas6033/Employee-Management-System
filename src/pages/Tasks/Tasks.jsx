@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../../components/index'
+import useDarkMode from '../../Hook/useDarkMode'
 const Tasks = ({
   taskCategory = 'Accepted Task List',
   date = '',
@@ -8,10 +9,11 @@ const Tasks = ({
   taskDescription = '',
 }) => {
 
+  const isDark = useDarkMode()
   const currentDate = new Date().toLocaleDateString()
 
   return (
-    <div className={`overflow-x-hidden md:overflow-x-auto scroll-smooth md:h-[75vh] md:flex justify-evenly items-center custom-scrollbar transition-all duration-300 ease-in-out`}>
+    <div className={`overflow-x-hidden md:overflow-x-auto scroll-smooth md:h-[75vh] md:flex justify-evenly items-center custom-scrollbar transition-all duration-300 ease-in-out ${isDark ? "bg-darkBackground"  : "bg-lightBackground"}`}>
       
       {/* New Tasklist  */}
       <div className='md:hover:scale-105 hover:cursor-pointer'>
